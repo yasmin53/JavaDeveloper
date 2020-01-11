@@ -1,0 +1,16 @@
+
+public class Global {
+	public static void main(String[] arg)
+	{
+		String name="Global warming";
+		System.out.println(name.substring(10));
+
+		System.out.println(name.substring(4,8));
+		System.out.println(name.trim());
+		
+		
+		
+		
+		}
+
+}

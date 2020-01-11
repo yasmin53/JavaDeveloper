@@ -1,0 +1,34 @@
+import java.util.*;
+import java.util.Scanner;
+public class Sell {
+	public static void main(String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		int sp,size;
+		
+		double d;
+		String tv;
+		tv=s.nextLine();
+		sp=s.nextInt();
+		size=s.nextInt();
+		if(tv.equals("crt"))
+				{
+			d=(5/100)*sp;
+			System.out.println(d);
+				}
+		else if(tv.equals("lcd"))	
+		{
+			if(size==14)
+			{
+				d=(8/100)*sp;
+			System.out.println(d);
+		}
+		else if(size==21)	
+		{
+			d=(10/100)*sp;
+			System.out.println(d);
+		}
+	}
+
+}
+}

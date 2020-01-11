@@ -1,0 +1,18 @@
+import java.util.HashMap;
+import java.util.Map;
+public class MapDemo {
+
+	public static void main(String[] args) {
+		Map<String,Integer> map= new HashMap<String,Integer>();
+		map.put("java", 8000);
+		map.put("android", 9000);
+		map.put("angular", 10000);
+		System.out.println(map);
+		System.out.println(map.get("java"));
+		System.out.println(map.containsKey("android"));
+		System.out.println(map.containsValue(10000));
+		map.replace("java",5000,8000);
+		
+	}
+
+}

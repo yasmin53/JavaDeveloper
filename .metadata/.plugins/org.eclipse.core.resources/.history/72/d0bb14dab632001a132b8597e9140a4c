@@ -1,0 +1,17 @@
+
+public class Courses {
+	public static void main(String[] args)
+	{
+		
+		String[] courses= {"java","c","c++","angular","python"};
+		String[] price= {"5000","3000","2000","10000","20000"};
+		
+		for(int i=0;i<courses.length;i++)
+		{
+			
+		System.out.println("enter the price of java course");
+		}
+		
+		}
+	}
+

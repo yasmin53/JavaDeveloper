@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+
+public class PgmStirng {
+
+	public static void main(String[] arg)
+	{
+		int i,n = 0;
+		for(i=0;i<n;i++)
+		{
+			
+		
+	String date="thursday g january 2020";
+	String[] dates=date.split("\\d");
+	
+	}
+	
+}
+}

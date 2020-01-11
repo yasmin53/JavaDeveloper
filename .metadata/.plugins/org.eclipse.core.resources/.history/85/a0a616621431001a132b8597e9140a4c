@@ -1,0 +1,11 @@
+import java.util.*;
+
+public class Hours {
+	public static void main(String[] args)
+	{
+		int h,n,tp;
+		Scanner s=new Scanner(System.in);
+		
+	}
+
+}

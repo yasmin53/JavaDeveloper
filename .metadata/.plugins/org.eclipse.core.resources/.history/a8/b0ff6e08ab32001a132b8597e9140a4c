@@ -1,0 +1,15 @@
+
+import java.util.Scanner;
+
+public class PgmStirng {
+
+	public static void main(String[] arg)
+	{
+		String name="yasmin";
+		String address="tadepalligudem";
+		System.out.println(name=address+ "chennai");
+		
+	}
+	
+}
+

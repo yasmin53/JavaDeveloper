@@ -1,0 +1,15 @@
+
+public class StringBuffer {
+public static void main(String[] args) 
+{
+	StringBuffer sb=new StringBuffer();
+	System.out.println(sb.capacity());
+	
+	
+}
+
+private char[] capacity() {
+	// TODO Auto-generated method stub
+	return null;
+}
+}

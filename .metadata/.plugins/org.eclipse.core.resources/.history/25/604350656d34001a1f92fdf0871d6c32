@@ -1,0 +1,82 @@
+package com.cts.activity.main;
+
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+
+
+
+public class EmployeeMain {
+	public static void main(String[] args)throws ClassNotFoundException, SQLException
+	
+	{
+		Class.forName("com.mysql.jdbc.Driver");
+		String url="jdbc:mysql://localhost:3306/cts";
+		String username="root";
+		String password="admin";
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter empid");
+		int empid=Integer.parseInt(s.nextLine());
+		System.out.println("enter fname");
+		String fname=(s.nextLine());
+		System.out.println("enter age");
+		int age=Integer.parseInt(s.nextLine());
+	
+		System.out.println("enter phone");
+		int phone=Integer.parseInt(s.nextLine());
+		System.out.println("enter dept");
+		int dept=Integer.parseInt(s.nextLine());
+		System.out.println("enter location");
+		String location=(s.nextLine());
+		System.out.println("enter salary");
+		int salary=Integer.parseInt(s.nextLine());
+		
+		
+		
+		
+		
+		
+		Connection con= DriverManager.getConnection(url,username,password);
+		//Statement stmt =con.createStatement();
+		String sql="INSERT INTO EMP VALUES(?,?,?,?,?,?,?)";
+		PreparedStatement ps=con.prepareStatement(sql);
+		ps.setInt(1,empid);
+		ps.setString(2,fname);
+		ps.setInt(3,age);
+		ps.setInt(4,phone );
+		ps.setInt(5,dept );
+		ps.setString(6,location );
+		ps.setInt(7,salary );
+		
+		
+		//String query="insert into emp values(103,'yasmin',21,98,8,'tpg',234)";
+		//String query="update emp set location='new delhi' where empid=103";
+		//String query="delete from emp where empid=103";
+		//int result=stmt.executeUpdate(query);
+		//if(result>0)
+		//{
+			//System.out.println("data inserted successfully");
+	//	}
+		//else
+		//{
+			//System.out.println("try again");
+		//}
+	//String query="select *from emp";
+	//ResultSet rs=stmt.executeQuery(query);
+	
+//	while(rs.next())
+	//{
+		//System.out.println(rs.getInt("empid")+":"+rs.getString("fname"));
+	//}
+				
+		
+	//}
+
+}
+}

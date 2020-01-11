@@ -1,0 +1,22 @@
+package secondproject;
+
+public class Constructors {
+	public static void main(String[] args)
+	{
+		Student student =new Student();
+		Student st=new Student(10);
+	}
+
+}
+
+class Student
+{
+	 Student()
+	{
+		System.out.println("studies");
+	}
+Student(int a)
+{
+	System.out.println("plays");
+}
+}

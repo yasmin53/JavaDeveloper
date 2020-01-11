@@ -1,0 +1,30 @@
+package secondproject;
+
+public class Overridding {
+	public static void main(String[] args)
+	{
+		
+	Employee employee= new Employee();
+	employee.display();
+	Manager manager=new Manager();
+	manager.display();
+	
+
+}
+class Employee
+{
+	public void display()
+	{
+		System.out.println("employee class");
+			}
+}
+class Manger extends Employee
+{
+	public void display()
+	{
+		System.out.println("manager class");
+	}
+
+
+}
+}

@@ -1,0 +1,37 @@
+import java.util.*;
+import java.util.Scanner;
+public class Product {
+	public static void main(String[] args)
+	{
+		String s1,s2,s3;
+		int q,tp;
+		Scanner s=new Scanner(System.in) ;
+		s1=s.nextLine();
+		s2=s.nextLine();
+		s3=s.nextLine();
+		q=s.nextInt();
+		if(s1.equals("s1"))
+		{
+			tp=q*10;
+			System.out.println(tp);
+			
+		}
+		if(s2.equals("s2"))
+		{
+			tp=q*11;
+			System.out.println(tp);
+			
+		}
+		if(s3.equals("s3"))
+		{
+			tp=q*12;
+			System.out.println(tp);
+			
+		}
+		
+		
+		
+	}
+
+}
+
