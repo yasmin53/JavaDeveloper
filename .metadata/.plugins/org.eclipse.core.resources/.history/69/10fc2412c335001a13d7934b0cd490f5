@@ -1,0 +1,23 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class FileHandling {
+	
+		public static void main(String[] args) throws FileNotFoundException,IOException
+		
+		{
+			
+			String path="c:\\users\\Lenovo\\Desktop\\dailywork\\data.txt";
+			FileOutputStream fout=new FileOutputStream(path);
+			Scanner sc=new Scanner(System.in);
+			String msg="welcome to filehandling";
+			byte [] b=msg.getBytes();
+			fout.write(b);
+			fout.close();
+			
+			
+		}
+	}
+

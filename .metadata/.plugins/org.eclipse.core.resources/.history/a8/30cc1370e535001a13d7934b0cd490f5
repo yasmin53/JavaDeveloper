@@ -1,0 +1,10 @@
+
+public class ThreadDemo {
+
+	public static void main(String[] args)
+	{
+		//Deamon thread
+		Thread thread= Thread.currentThread();
+		System.out.println(thread);
+	}
+}
