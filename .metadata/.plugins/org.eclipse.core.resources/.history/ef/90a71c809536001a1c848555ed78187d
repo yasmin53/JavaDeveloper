@@ -1,14 +1,9 @@
-import java.io.Serializable;
 
-
-public class Employee implements Serializable {
-	
-	
-	
+public class Employee {
 	private static final double Salary = 0;
 	private int id;
 	private String name;
-    transient private String address;//make them no serialiazable//
+	private String address;
 	private double phone;
 	private double salary;
 	

@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+public class StreanApi {
+	
+	public static void main(String[] args)
+	{
+		List<String> names=new ArrayList<String>();
+		addName(names);
+		
+		names.forEach(System.out::println);
+		List<String> lengthScale=names.stream().filter(s-> s.length() >=7).collect(Collectors.toList());
+		System.out.println("the names which has length greater than 7:\n");
+		lengthScale.forEach(System.out::println);
+		
+		//print all names in capital letters//
+		List<String> capNames=names.stream().map(s-> s.toUpperCase()).collect(Collectors.toList());
+		System.out.println("print the names in uppercase");
+		capNames.forEach(System.out::println);
+		
+		
+		
+		}
+
+	private static void addName(List<String> names) {
+		names.add("yasmin");
+		names.add("younus");
+		names.add("azu");
+		names.add("mohammad ismail");
+		
+		
+		
+		
+		// TODO Auto-generated method stub
+		
+	}
+
+}

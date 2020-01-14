@@ -1,24 +1,17 @@
-import java.io.Serializable;
 
-
-public class Employee implements Serializable {
-	
-	
-	
+public class Employee {
 	private static final double Salary = 0;
 	private int id;
 	private String name;
-    transient private String address;//make them no serialiazable//
+	private String address;
 	private double phone;
-	private double salary;
 	
-	public Employee(int id, String name, String address, double phone,double salary) {
+	public Employee(int id, String name, String address, double phone) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.address = address;
 		this.phone = phone;
-		this.salary=salary;
 	}
 
 
@@ -46,7 +39,7 @@ public class Employee implements Serializable {
 	}
 	public double getSalary()
 	{
-		return salary;
+		return Salary;
 	}
 	public void setPhone(double phone) {
 		this.phone = phone;
@@ -55,7 +48,7 @@ public class Employee implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + ", salary="+salary+" ]";
+		return "Employee [id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + "]";
 	}
 
 

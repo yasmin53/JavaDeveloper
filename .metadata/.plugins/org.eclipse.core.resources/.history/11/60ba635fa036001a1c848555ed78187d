@@ -1,0 +1,56 @@
+import java.time.LocalDate;
+import java.util.Date;
+
+public class DateDemo {
+	
+	public static void main(String[] args)
+	{
+		
+		//LocalDate date=LocalDate.now();
+		//System.out.println("today's date is :"+date);
+		
+		
+		
+		LocalDate date1=LocalDate.now();
+		int day=date1.getDayOfMonth();
+		int month=date1.getMonthValue();
+		int year=date1.getYear();
+		
+		System.out.printf("Year : %d , Month : %d , Day : %d \t %n",year,month,day);
+
+		/*
+		 * Date date=new Date();
+		 
+		int day=date.getDay();
+		switch(day)
+		{
+		case 0:
+			System.out.println("sunday");
+		break;
+		case 1:
+			System.out.println("monday");
+		break;
+		
+		case 2:
+			System.out.println("tuesday");
+		break;
+		
+		case 3:
+			System.out.println("wednesday");
+		break;
+		
+		case 4:
+			System.out.println("thursday");
+		break;
+		case 5:
+			System.out.println("friday");
+		break;
+		case 6:
+			System.out.println("satday");
+		break;
+		}
+		*/
+		
+		}
+	}
+	
