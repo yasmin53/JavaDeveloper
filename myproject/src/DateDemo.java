@@ -72,15 +72,15 @@ public class DateDemo {
 			//System.out.printf("The Year %s is not a Leap year %n",today);
 		//}
 		
-		String birthday="Jan 10 1985";
-		try
-		{
-			DateTimeFormatter formatter=DateTimeFormatter.ofPattern("MMM dd yyyy");
-			LocalDate birth=LocalDate.parse(birthday, formatter);
-			System.out.printf("The Date %s is formatted in %s %n",birthday,birth);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
+		//String birthday="Jan 10 1985";
+		//try
+		//{
+			//DateTimeFormatter formatter=DateTimeFormatter.ofPattern("MMM dd yyyy");
+			//LocalDate birth=LocalDate.parse(birthday, formatter);
+			//System.out.printf("The Date %s is formatted in %s %n",birthday,birth);
+		//}
+		//catch (Exception e) {
+			//e.printStackTrace();
 		
 		
 
