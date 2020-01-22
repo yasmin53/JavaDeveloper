@@ -5,4 +5,4 @@ class Rectangle {
         this.width=width;
     }
 }
-console.log(Rectangle);
+console.log(Rectangle );
