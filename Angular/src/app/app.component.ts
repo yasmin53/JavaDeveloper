@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from './models/user';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ye na kaam pyaar mey kush hey ye haar mey inn jaisa q banoo';
+  title = 'stock market';
+  user= new User(101,'yasmin','zubduma@gmail.com',9989777);
+
+  callme()
+  {
+    alert('Welcome:'+ this.user.name);
+  }
 }
