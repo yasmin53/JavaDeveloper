@@ -1,94 +1,28 @@
-
-
-<!-- <h2>{{user.name | uppercase}}</h2>
-
-
-
-    <div class="container body-content app-container">
-    
-        <div>
-    <input type="text" [(ngModel)]="user.name"
-    class="form-control">
+<header>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Angular Bootstrap Demo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+  
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="users">Contacts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="register">Add Users</a>
+        </li>
+  
+      </ul>
     </div>
-    <div>
-      <button class="btn btn-primary" (click)="callme()">callme</button>
-    
-    </div>
-    <div>
-    {{user.name}}
-    </div>
-    
-   -->
-   <!-- <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-        <form>
-          <div id="user-data">
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" id="username" class="form-control">
-            </div>
-            <button class="btn btn-default" type="button">Suggest an Username</button>
-            <div class="form-group">
-              <label for="email">Mail</label>
-              <input type="email" id="email" class="form-control">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="secret">Secret Questions</label>
-            <select id="secret" class="form-control">
-              <option value="pet">Your first Pet?</option>
-              <option value="teacher">Your first teacher?</option>
-            </select>
-          </div>
-          <button class="btn btn-primary" type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-        <form>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="email">email</label>
-            <input
-              type="text"
-              id="email"
-              class="form-control">
-          </div>
-          <div class="radio" *ngFor="let gender of genders">
-            <label>
-              <input
-                type="radio"
-                [value]="gender">{{ gender }}
-            </label>
-          </div>
-          <button class="btn btn-primary" type="submit" onclick ="sendinfo">Submit</button>
-        </form>
-      </div>
-      </div>
- -->
-
-      <!-- <input type="email" 
- id="email" 
- class="form-control"
- ngModel
- name="email">
-
- <app-home></app-home> -->
-
-
-
-
-
-
-
+  </nav>
+</header>
+<router-outlet></router-outlet>
+<footer>
+  <p  class="text-xs-center">© Copyright 2020. All rights reserved.</p>
+</footer>

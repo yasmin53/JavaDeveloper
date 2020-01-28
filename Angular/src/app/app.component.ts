@@ -9,10 +9,7 @@ import { User } from './models/user';
 })
 export class AppComponent {
   title = 'stock market';
-  user= new User(101,'yasmin','zubduma@gmail.com',9989777);
+  
 
-  callme()
-  {
-    alert('Welcome:'+ this.user.name);
-  }
+
 }
