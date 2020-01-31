@@ -10,6 +10,9 @@ import { ExampleComponent } from './example/example.component';
 import { UserService } from './services/user.service';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule} from '@angular/common/http';
+import { UpdateUserComponent } from './user/update-user/update-user.component';
+import { PipeComponent } from './pipes/pipe/pipe.component';
+import { CustomepipePipe } from './customepipe.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { HttpClientModule} from '@angular/common/http';
     HomeComponent,
     ExampleComponent,
     UsersComponent,
+    UpdateUserComponent,
+    PipeComponent,
+    CustomepipePipe,
     
   ],
   imports: [

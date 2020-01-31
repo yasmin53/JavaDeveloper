@@ -1,6 +1,8 @@
 <header>
+
+
   <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">Angular Bootstrap Demo</a>
+    <a class="navbar-brand" href="#">STOCK MARKET CHARTING</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,17 +14,27 @@
           <a class="nav-link" routerLink="home" >Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="users">Contacts</a>
+          <a class="nav-link" routerLink="usersdetails">UserDetails</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="register">Add Users</a>
+          <a class="nav-link" routerLink="login">Login</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="signup">SignUp</a>
+      
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="pipes">pipes</a>
+        </li> -->
   
       </ul>
     </div>
   </nav>
 </header>
 <router-outlet></router-outlet>
-<footer>
-  <p  class="text-xs-center">© Copyright 2020. All rights reserved.</p>
-</footer>
+
+<div class="fixed-footer">
+  <div class="container">@Copy Right</div>
+</div>
