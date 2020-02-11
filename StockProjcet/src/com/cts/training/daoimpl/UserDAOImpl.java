@@ -92,6 +92,7 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public boolean isValid(String username, String passsword) {
+		try {
 	Session	session= sessionFactory.openSession();
 	Transaction tx=session.beginTransaction();
 	Query query =session.createQuery("from  User where username=:username and password=:password");

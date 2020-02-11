@@ -4,8 +4,8 @@ import com.cts.training.dao.UserDAO;
 import com.cts.training.daoimpl.UserDAOImpl;
 public class UserController {
 	public static void main(String[] args) {
-		User user = new User(106, "Yasmin", "467365", "yasmin@cts.com", 95794567L, false);
-		UserDAO userDAO = new UserDAOImpl();
+//		User user = new User(106, "Yasmin", "467365", "yasmin@cts.com", 95794567L, false);
+//		UserDAO userDAO = new UserDAOImpl();
 //Saving User
 //		boolean status = userDAO.saveUser(user);
 //		if (status) {
