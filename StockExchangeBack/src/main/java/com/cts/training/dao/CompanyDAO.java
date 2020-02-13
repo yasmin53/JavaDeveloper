@@ -6,14 +6,18 @@ import com.cts.training.bean.Company;
 
 public interface CompanyDAO {
 	
-	public boolean saveCompany(Company company);
+//	public boolean saveCompany(Company company);
+//	
+//	public boolean updateCompany(Company company);
 	
-	public boolean updateCompany(Company company);
-	
-	public boolean removeCompany(Company company);
+	public boolean deleteCompany(Company company);
 	
 	public Company getCompanyById(int id);
 	
 	public List<Company> getAllCompanies();
+
+	public void saveorUpdate(Company company);
+
+	boolean saveorUpdateCompany(Company company);
 
 }

@@ -22,7 +22,7 @@ public class HibernateCongiguration {
 		
 		LocalSessionFactoryBean sessionFactory =new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource());
-		sessionFactory.setPackagesToScan(new String[]{"com.cts.training.model"});
+		sessionFactory.setPackagesToScan(new String[]{"com.cts.training.bean"});
 		sessionFactory.setHibernateProperties(hibernateProperties());
 		return sessionFactory;
 		}

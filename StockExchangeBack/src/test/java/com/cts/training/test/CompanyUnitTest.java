@@ -22,6 +22,13 @@ public class CompanyUnitTest {
 		companyDAO =(CompanyDAO) context.getBean("companyDAO");
 	}
 
+	
+	/*
+	 * @Test(expected = NullPointerException.class) public void test_update_user() {
+	 * Company r=companyDAO.getCompanyById(1); r.setName("CTS");
+	 * assertEquals(true,companyDAO.updateCompany(r)); }
+	 */
+	
 //	@Test
 //	public void testGetAllCompanies() {
 //		List<Company> companies=companyDAO.getAllCompanies();
@@ -31,5 +38,9 @@ public class CompanyUnitTest {
 //	
 //	
 //					
-
+	@Test()
+	public void test_save_company_success() {
+		Company c=new Company(78,"akhil",456.78,"IT","bRAIN");
+		assertEquals(true,companyDAO.saveorUpdateCompany(c));
+	}
 }

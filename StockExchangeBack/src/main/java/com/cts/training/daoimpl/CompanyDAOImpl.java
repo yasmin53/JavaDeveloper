@@ -2,6 +2,7 @@ package com.cts.training.daoimpl;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import com.cts.training.bean.Company;
@@ -10,9 +11,9 @@ import com.cts.training.dao.CompanyDAO;
 @Transactional
 @Repository(value = "companyDAO")
 public class CompanyDAOImpl implements CompanyDAO{
+	@Autowired
 	SessionFactory sessionFactory;
-	@Override
-	public boolean saveCompany(Company company) {
+	public boolean saveorUpdateCompany(Company company) {
 		try {
 			sessionFactory.getCurrentSession().save(company);
 			return true;
@@ -21,18 +22,15 @@ public class CompanyDAOImpl implements CompanyDAO{
 			return false;
 		}
 	}
+	//@Override
+	/*
+	 * public boolean updateCompany(Company company) { try {
+	 * sessionFactory.getCurrentSession().update(company); return true; }catch
+	 * (HibernateException e) { System.out.println("Exception: "+e.getMessage());
+	 * return false; } }
+	 */
 	@Override
-	public boolean updateCompany(Company company) {
-		try {
-			sessionFactory.getCurrentSession().update(company);
-			return true;
-		}catch (HibernateException e) {
-			System.out.println("Exception: "+e.getMessage());
-			return false;
-		}
-	}
-	@Override
-	public boolean removeCompany(Company company) {
+	public boolean deleteCompany(Company company) {
 		try {
 			sessionFactory.getCurrentSession().delete(company);
 			return true;
@@ -41,6 +39,7 @@ public class CompanyDAOImpl implements CompanyDAO{
 			return false;
 		}
 	}
+	
 	@Override
 	public Company getCompanyById(int id) {
 		try {
@@ -60,5 +59,10 @@ public class CompanyDAOImpl implements CompanyDAO{
 			System.out.println("Exception: "+e.getMessage());
 			return null;
 		}
+	}
+	@Override
+	public void saveorUpdate(Company company) {
+		// TODO Auto-generated method stub
+		
 	}
 }

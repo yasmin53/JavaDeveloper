@@ -7,27 +7,20 @@
 //import org.hibernate.SessionFactory;
 //import org.hibernate.Transaction;
 //
-//import com.cts.activity.hibernate.HibernateUtil;
+//
 //import com.cts.training.bean.StockExchange;
 //import com.cts.training.dao.StockExchangeDAO;
 //
 //public class StockExchangeDAOImpl implements StockExchangeDAO{
 //
-//	SessionFactory sessionFactory=HibernateUtil.getSessionFactory();
+//	SessionFactory sessionFactory;
 //	
 //	@Override
 //	public boolean saveStockExchange(StockExchange stockExchange) {
 //		try {
-//			Session session=sessionFactory.openSession();
-//			Transaction tx=session.beginTransaction();
-//			session.save(stockExchange);
-//			tx.commit();
-//			session.close();
-//			return true;
-//		} catch (HibernateException e) {
-//			System.out.println("Exception: "+e.getMessage());
-//			return false;
-//		}
+//			
+//	
+//	}
 //	}
 //
 //	@Override
