@@ -24,9 +24,11 @@ public class Company implements Serializable{
 	@Id
 	@GeneratedValue
 	private int id;
-	private String name;
-	private double turnover;
+	private String companyname;
 	private String ceo;
+	private String boardOfDirector;
+	private double turnover;
+	private double noe;
 	private String sector;
 	
 	public Company() {
@@ -41,20 +43,12 @@ public class Company implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getCompanyname() {
+		return companyname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public double getTurnover() {
-		return turnover;
-	}
-
-	public void setTurnover(double turnover) {
-		this.turnover = turnover;
+	public void setCompanyname(String companyname) {
+		this.companyname = companyname;
 	}
 
 	public String getCeo() {
@@ -65,6 +59,30 @@ public class Company implements Serializable{
 		this.ceo = ceo;
 	}
 
+	public String getBoardOfDirector() {
+		return boardOfDirector;
+	}
+
+	public void setBoardOfDirector(String boardOfDirector) {
+		this.boardOfDirector = boardOfDirector;
+	}
+
+	public double getTurnover() {
+		return turnover;
+	}
+
+	public void setTurnover(double turnover) {
+		this.turnover = turnover;
+	}
+
+	public double getNoe() {
+		return noe;
+	}
+
+	public void setNoe(double noe) {
+		this.noe = noe;
+	}
+
 	public String getSector() {
 		return sector;
 	}
@@ -73,22 +91,25 @@ public class Company implements Serializable{
 		this.sector = sector;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Company [id=" + id + ", companyname=" + companyname + ", ceo=" + ceo + ", boardOfDirector="
+				+ boardOfDirector + ", turnover=" + turnover + ", noe=" + noe + ", sector=" + sector + "]";
+	}
 
-	public Company(int id, String name, double turnover, String ceo, String sector) {
+	public Company(int id, String companyname, String ceo, String boardOfDirector, double turnover, double noe,
+			String sector) {
 		super();
 		this.id = id;
-		this.name = name;
-		this.turnover = turnover;
+		this.companyname = companyname;
 		this.ceo = ceo;
+		this.boardOfDirector = boardOfDirector;
+		this.turnover = turnover;
+		this.noe = noe;
 		this.sector = sector;
 	}
 
-	@Override
-	public String toString() {
-		return "Company [id=" + id + ", name=" + name + ", turnover=" + turnover + ", ceo=" + ceo + ", sector=" + sector
-				+ "]";
-	}
+	
 
 	
 	

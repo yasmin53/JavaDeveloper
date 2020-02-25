@@ -17,7 +17,7 @@ public class StockExchange implements Serializable{
 
 	private static final long serialVersionUID = 7636199702245731098L;
 	@Id
-	@GeneratedValue
+//	@GeneratedValue
 	private int id;
 	private String stockexchangename;
 	private String brief;
