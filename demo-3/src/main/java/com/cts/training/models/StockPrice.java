@@ -1,85 +1,78 @@
 package com.cts.training.models;
-
-
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
-
+import java.time.format.DateTimeFormatter;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
-
+import org.springframework.stereotype.Component;
 @Entity
-@Table(name="stockprices")
+@Table(name = "stockprices")
 @XmlRootElement
-public class StockPrice implements Serializable{
-
-	private static final long serialVersionUID = 2418334347026050569L;
+public class StockPrice implements Serializable {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 6893738367295298635L;
 	@Id
-	private int company_id;
-	private String stock_exchange;
-	private double current_price;
-	private LocalDate date;
-	private LocalTime time;
-	
+//	@GeneratedValue
+	private int id;
+	private int companyid;
+	private double currentprice;
+	private LocalDateTime opendatetime;
 	public StockPrice() {
-		
 	}
-
-	public StockPrice(int company_id, String stock_exchange, double current_price, LocalDate date, LocalTime time) {
+	public StockPrice(int id, int companyid, double currentprice, LocalDateTime opendatetime) {
 		super();
-		this.company_id = company_id;
-		this.stock_exchange = stock_exchange;
-		this.current_price = current_price;
-		this.date = date;
-		this.time = time;
+		this.id = id;
+		this.companyid = companyid;
+		this.currentprice = currentprice;
+		this.opendatetime = opendatetime;
 	}
-
-	public int getCompany_id() {
-		return company_id;
+	public int getId() {
+		return id;
 	}
-
-	public void setCompany_id(int company_id) {
-		this.company_id = company_id;
+	public void setId(int id) {
+		this.id = id;
 	}
-
-	public String getStock_exchange() {
-		return stock_exchange;
+	public int getCompanyid() {
+		return companyid;
 	}
-
-	public void setStock_exchange(String stock_exchange) {
-		this.stock_exchange = stock_exchange;
+	public void setCompanyid(int companyid) {
+		this.companyid = companyid;
 	}
-
-	public double getCurrent_price() {
-		return current_price;
+	public double getCurrentprice() {
+		return currentprice;
 	}
-
-	public void setCurrent_price(double current_price) {
-		this.current_price = current_price;
+	public void setCurrentprice(double currentprice) {
+		this.currentprice = currentprice;
 	}
-
-	public LocalDate getDate() {
-		return date;
+	public LocalDateTime getOpendatetime() {
+		return opendatetime;
 	}
-
-	public void setDate(LocalDate date) {
-		this.date = date;
+	public void setOpendatetime(LocalDateTime opendatetime) {
+		this.opendatetime = opendatetime;
 	}
-
-	public LocalTime getTime() {
-		return time;
-	}
-
-	public void setTime(LocalTime time) {
-		this.time = time;
-	}
-
 	@Override
 	public String toString() {
-		return "StockPrice [company_id=" + company_id + ", stock_exchange=" + stock_exchange + ", current_price="
-				+ current_price + ", date=" + date + ", time=" + time + "]";
+		return "StockPrice [id=" + id + ", companyid=" + companyid + ", currentprice=" + currentprice
+				+ ", opendatetime=" + opendatetime + "]";
+	}
 	}
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
