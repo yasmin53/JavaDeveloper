@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import org.springframework.stereotype.Component;
@@ -24,6 +25,10 @@ public class User implements Serializable {
 	private long phone;
 	private String repassword;
 	
+	@Transient
+	private String regStatus;
+	private String active="no";
+	
 	public User() {
 		
 	}
@@ -32,6 +37,22 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + ", phone="
 				+ phone + ", repassword=" + repassword + "]";
+	}
+
+	public String getRegStatus() {
+		return regStatus;
+	}
+
+	public void setRegStatus(String regStatus) {
+		this.regStatus = regStatus;
+	}
+
+	public String getActive() {
+		return active;
+	}
+
+	public void setActive(String active) {
+		this.active = active;
 	}
 
 	public int getId() {

@@ -1,0 +1,21 @@
+h2
+{
+    text-align:center;
+    font-size:30px;
+}
+
+
+/* .bg-image {
+    min-height: 80vh;
+    background-image: url("C:\Users\DELL\Desktop\Sample Project1\StockExchangeMarketing\src\assets\images\image1.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+  } 
+ */
+
+
+ .carousel-inner img {
+    width: 100%;
+    height: 100%;
+ }

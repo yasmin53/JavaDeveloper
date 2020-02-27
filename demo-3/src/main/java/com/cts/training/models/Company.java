@@ -22,7 +22,7 @@ public class Company implements Serializable{
 
 	private static final long serialVersionUID = -3774796956003475482L;
 	@Id
-	@GeneratedValue
+//	@GeneratedValue
 	private int id;
 	private String companyname;
 	private String ceo;
