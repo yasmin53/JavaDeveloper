@@ -2,7 +2,9 @@ package com.cts.training.controller;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 //import org.springframework.mail.javamail.JavaMailSender;
@@ -16,13 +18,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.cts.training.dto.UserDTO;
 import com.cts.training.models.User;
 import com.cts.training.repo.UserRepo;
+import com.cts.training.service.UserService;
 @RestController
 @CrossOrigin(origins = "*")
 public class UserRestServiceController {
 	@Autowired
 	UserRepo ur;
+	
+	@Autowired
+	UserService us;
 	
 	@Autowired
 	JavaMailSender jms;
@@ -37,22 +45,29 @@ public class UserRestServiceController {
 		User us = usr.get();
 		return us;
 	}
-	@PostMapping("/user")
-	public User save(@RequestBody User usr) {
-		User us = ur.save(usr);
-		try {
-			SimpleMailMessage sm =new SimpleMailMessage();
-			sm.setFrom("zubduma@gmail.com");
-			sm.setTo("zubduma@gmail.com");
-			sm.setSubject("texting mail");
-			sm.setText("Account created click on <a href='http://localhost:4600/activate?"+us.getEmail()+"'>Click</a>");
-			jms.send(sm);
-			System.out.println("sending mail..");
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		//return "{\"reg\":\"ok\"}";
-		return us;
+//	@PostMapping("/user")
+//	public User save(@RequestBody User usr) {
+//		User us = ur.save(usr);
+//		try {
+//			SimpleMailMessage sm =new SimpleMailMessage();
+//			sm.setFrom("zubduma@gmail.com");
+//			sm.setTo("zubduma@gmail.com");
+//			sm.setSubject("texting mail");
+//			sm.setText("Account created click on <a href='http://localhost:4600/activate?"+us.getEmail()+"'>Click</a>");
+//			jms.send(sm);
+//			System.out.println("sending mail..");
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		//return "{\"reg\":\"ok\"}";
+//		return us;
+//	}
+	
+	@RequestMapping(value="/user", method= RequestMethod.POST)
+	public ResponseEntity<UserDTO> save(@RequestBody UserDTO reg)
+	{
+		us.insert(reg);
+		return new ResponseEntity<UserDTO>(reg,HttpStatus.CREATED);		
 	}
 	@DeleteMapping("/user/{id}")
 	public void delete(@PathVariable int id) {
