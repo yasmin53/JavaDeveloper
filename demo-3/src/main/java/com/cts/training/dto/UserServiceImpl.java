@@ -13,16 +13,22 @@ import com.cts.training.service.UserService;
 public class UserServiceImpl implements UserService {
 
 	@Autowired
-	UserRepo ur;
-	
+	UserRepo userRepo;
 	@Override
-	public UserDTO insert(UserDTO ud) {
-		User ue = new User();
-		BeanUtils.copyProperties(ud, ue);
-		ur.save(ue);
-		return ud;
+	public UserDTO insert(UserDTO userDTO) {
+		User user = new User();
+		BeanUtils.copyProperties(userDTO, user);
+		userRepo.save(user);
+		return userDTO;
+
+
 	}
 	
 	
 
 }
+
+
+
+
+

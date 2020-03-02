@@ -24,7 +24,7 @@ import com.cts.training.models.User;
 import com.cts.training.repo.UserRepo;
 import com.cts.training.service.UserService;
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*") 
 public class UserRestServiceController {
 	@Autowired
 	UserRepo ur;
